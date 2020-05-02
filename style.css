@@ -87,9 +87,26 @@ header a:hover{
 .ingredients{
   float: left; width: 25%;
   max-width: 250px
-  color: green;
 }
 .instructions{
   float: right; width: 75%
-  color: red;
+}
+/* unvisited link */
+a:link {
+ color:  	#c0c0c0;
+}
+
+/* visited link */
+a:visited {
+ color: #dedede;
+}
+
+/* mouse over link */
+a:hover {
+ color: #36C5F0;
+}
+
+/* selected link */
+a:active {
+ color: blue;
 }
