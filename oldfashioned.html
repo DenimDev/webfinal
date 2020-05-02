@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="author" content="Gabriel Weber">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400|Varela+Round&display=swap" rel="stylesheet">
+    <title>Code cooking | Old fashioned</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div><img src="images/old-fashioned.jpg" alt="Old fashioned cocktail" width="500" </div>
+      <div>
+        <h1>The Old fashioned</h1>
+        <p>This is the coctail of history, a perfect blend of rich, sweet, and sour. It perfectly fits the original definition of a coctail "A stimulating liquor, composed of spirits of any kind, sugar, water, and bitters".</p>
+        <p>This is courtesy of the New York Times</p>
+      </div>
+    </div>
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <form id="scaler">
+        Scale: <input type="text" name="userScale" value=1>
+      </form>
+      <button type="button" onclick="scale()">Feed a crowd</button><br>
+      <form>
+        <label><input type="checkbox"><span class="number">1</span> spoon of simple syurp </label><br>
+        <label><input type="checkbox"><span class="number">2</span> dashes of Angostura bitters </label><br>
+        <label><input type="checkbox"><span class="number">2</span> ounces of rye (prefered) or bourbon </label><br>
+        <label><input type="checkbox"><span class="number">1</span> large ice cube </label><br>
+        <label><input type="checkbox"><span class="number">1</span> orange twist </label><br>
+      </form>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <form>
+        <label><input type="checkbox">1. Combine the bitters, simple syurp, and whiskey.</label><br>
+        <label><input type="checkbox">2. Add the ice cube. Stir until chilled and diluted, about 30 seconds.</label><br>
+        <label><input type="checkbox">3. Garnish with orange twist.</label><br>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+
+function scale() {
+
+  var numbers = document.getElementsByClassName("number");
+
+  var scale = parseFloat(document.getElementById("scaler").userScale.value);
+
+  var i;
+
+  for (i = 0; i < numbers.length; i++) {
+    numbers[i].innerHTML = parseFloat(numbers[i].innerHTML) * scale;
+  }
+
+}
+
+</script>

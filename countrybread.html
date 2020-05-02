@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="author" content="Gabriel Weber">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400|Varela+Round&display=swap" rel="stylesheet">
+    <title>Code cooking | French country loaf</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div><img src="images/countrybread.jpg" alt="Basic Pancakes with syurp and blueberries" width="500" </div>
+      <div>
+        <h1>French bread</h1>
+        <p>This is my favorite table bread, by making a poolash we get extra fermenty flavors without having to deal with a sourdough starter or large bulk fermentaion.</p>
+
+        <p>This is courtesy of King Arthur Flour</p>
+      </div>
+    </div>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <form id="scaler">
+        Scale: <input type="text" name="userScale" value=1>
+      </form>
+      <button type="button" onclick="scale()">Feed a crowd</button><br>
+      <form>
+        <h4>Starter</h4>
+        <label ><input type="checkbox"><span class="number">227</span> grams of 90-100°F water </label><br>
+        <label><input type="checkbox"><span class="number">0.5</span> teaspoons of yeast </label><br>
+        <label><input type="checkbox"><span class="number">149</span> grams of bread flour </label><br>
+        <label><input type="checkbox"><span class="number">28</span> grams of whole wheat flour </label><br>
+        <h4>Dough</h4>
+        <label><input type="checkbox">All of the starter </label><br>
+        <label><input type="checkbox"><span class="number">227</span> grams of 100-115°F water </label><br>
+        <label><input type="checkbox"><span class="number">.75</span> teaspoons of active dry yeast </label><br>
+        <label><input type="checkbox"><span class="number">450</span> grams of bread flour. Up to <span class="number">30</span> grams extra might be needed</label><br>
+        <label><input type="checkbox"><span class="number">2</span> teaspoons of salt</label><br>
+      </form>
+
+    </div>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <form>
+        <label><input type="checkbox">1. To make the starter: Stir all of the starter ingredients together to make a thick, pudding-like mixture.</label><br>
+        <label><input type="checkbox">2. Cover with plastic wrap and let it rest for at least 2 hours. For best flavor, let the starter rest longer; overnight (up to 16 hours) is best.</label><br>
+        <label><input type="checkbox">3. To make the dough: Stir down the starter with a spoon and add the water, yeast, sugar, <span class="number">390</span> grams of the four, and the salt. The dough will be a loose, messy mass.</label><br>
+        <label><input type="checkbox">4. Let it rest for 12 to 15 minutes, then stir it again; it should become more cohesive and a bit smoother. NOTE:Dough handles better once it's had time for the flour to absorb the water while resting and relaxing. By using this method, you'll tend to add less flour, and have much bigger holes in your finished bread.</label><br>
+        <label><input type="checkbox">5. Knead the dough, adding up to an additional <span class="number">90</span> grams flour (as necessary to make a soft dough), 10 to 12 minutes.</label><br>
+        <label><input type="checkbox">6. Place the dough in a lightly greased bowl or plastic container, cover with lightly greased plastic wrap, and let it rise until almost doubled (depending on the weather, this could be 1 to 2 hours).</label><br>
+        <label><input type="checkbox">7. Deflate the dough gently, but don't knock out all the air; this will create those 'holes' so important to French bread. Form the dough into a round ball.</label><br>
+        <label><input type="checkbox">8. Place a semolina- or cornmeal-dusted piece of parchment paper into a dutch oven. Gently place the ball of dough in the dutch oven</label><br>
+        <label><input type="checkbox">9. Cover the bread gently with lightly greased plastic wrap, and let it rise until it's puffy and about 40% to 50% larger, anywhere from 45 to 90 minutes.</label><br>
+        <label><input type="checkbox">10. Preheat your oven to 475°F.</label><br>
+        <label><input type="checkbox">11. Slash the ball of dough with a knife, and dust it with flour.</label><br>
+        <label><input type="checkbox">12. Add about a teaspoon of water into the dutch oven, cover and place in the oven. Reduce heat to 425°F</label><br>
+        <label><input type="checkbox">13. Bake the bread for about 25 to 30 minutes, or until it's a rich golden brown, and its interior temperature registers at least 190°F on a digital thermometer.</label><br>
+        <label><input type="checkbox">14. Remove the bread from the oven, and cool it on a rack. Store bread, loosely wrapped in paper, for a couple of days at room temperature; wrap it in plastic and freeze for longer storage.</label><br>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+
+function scale() {
+
+  var numbers = document.getElementsByClassName("number");
+
+  var scale = parseFloat(document.getElementById("scaler").userScale.value);
+
+  var i;
+
+  for (i = 0; i < numbers.length; i++) {
+    numbers[i].innerHTML = parseFloat(numbers[i].innerHTML) * scale;
+  }
+
+}
+
+</script>

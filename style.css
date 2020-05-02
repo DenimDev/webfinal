@@ -1,0 +1,95 @@
+body{
+  background-color: #282a3f;
+  color: #bdbeca;
+  font-family: "Varela Round", sans-serif;
+  font: 16px/1.5;
+  padding: 0;
+  margin: 0;
+}
+/* Gobal */
+.container{
+  width: 80%
+  margin:auto;
+  overflow: hidden;
+}
+ul{
+  margin:0;
+  padding:0;
+}
+
+.button_1{
+  height: 38px;
+  background: red;
+  border:0;
+  padding-left: 20px;
+  padding-right: 20px;
+  color: green;
+}
+/* Header */
+header{
+  background: #7a9cc6;
+  color: #f5f4e9;
+  padding-top: 30px;
+  min-height: 70px;
+  border-bottom: #f7b538 3px solid;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header a{
+  color: #f5f4e9;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+header li{
+  float: left;
+  display: inline;
+  padding: 0 20px 0 20px;
+}
+
+header #branding{
+  float: left;
+}
+
+header #branding h1{
+  margin: 0;
+}
+
+header nav{
+  float: right;
+  margin-top: 10px;
+}
+
+header .highlight, header .current a{
+  color: #282a3f;
+}
+
+header a:hover{
+  color: #bdbeca;
+}
+
+
+
+/* boxes */
+
+#boxes{
+  margin-top: 20px;
+}
+
+#boxes .box {
+  float: left;
+  text-align: center;
+  width: 30%;
+  padding: 10px;
+}
+.ingredients{
+  float: left; width: 25%;
+  max-width: 250px
+  color: green;
+}
+.instructions{
+  float: right; width: 75%
+  color: red;
+}

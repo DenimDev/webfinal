@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta name="author" content="Gabriel Weber">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400|Varela+Round&display=swap" rel="stylesheet">
+    <title>Code cooking | Basic Pancakes</title>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div><img src="images/basicpancakes.jpg" alt="Basic Pancakes with syurp and blueberries" width="500" </div>
+      <div>
+        <h1>Basic Pancakes</h1>
+        <p>This is my favorite every day pancake recipe, as I normaly don't keep buttermilk. If you are after super fluffy pancakes, you can seperate the egg whites and beat them to medium peaks and fold them in at the end.</p>
+
+        <p>This is courtesy of King Arthur Flour</p>
+      </div>
+    </div>
+
+    <div class="ingredients">
+      <h2>Ingredients</h2>
+      <form id="scaler">
+        Scale: <input type="text" name="userScale" value=1>
+      </form>
+      <button type="button" onclick="scale()">Feed a crowd</button><br>
+      <form>
+        <label><input type="checkbox"><span class="number">2</span> eggs </label><br>
+        <label><input type="checkbox"><span class="number">283</span> grams of milk </label><br>
+        <label><input type="checkbox"><span class="number">3</span> tablespoons of butter or vegtable oil </label><br>
+        <label><input type="checkbox"><span class="number">184</span> grams of all-purpose flour </label><br>
+        <label><input type="checkbox"><span class="number">0.75</span> teaspoons of salt </label><br>
+        <label><input type="checkbox"><span class="number">2</span> teaspoons of baking powder </label><br>
+        <label><input type="checkbox"><span class="number">25</span> grams of sugar or</label><br>
+        <label><input type="checkbox"><span class="number">35</span> grams of malted milk powder</label><br>
+        <span class="number">1200</span> calories in total<br>
+      </form>
+
+    </div>
+    <div class="instructions">
+      <h2>Instructions</h2>
+      <form>
+        <label><input type="checkbox">1. Beat the eggs and milk until light and foamy, about 3 minutes at high speed of a stand or hand mixer. Stir in the butter or vegetable oil.</label><br>
+        <label><input type="checkbox">2. Whisk the dry ingredients together to evenly distribute the salt, baking powder and sweetener.</label><br>
+        <label><input type="checkbox">3. Gently and quickly mix into the egg and milk mixture. Let the batter rest for at least 15 minutes, while the griddle is heating; it'll thicken slightly.</label><br>
+        <label><input type="checkbox">4. Heat a heavy frying pan over medium heat, or set an electric griddle to 375°F. Lightly grease frying pan or griddle. The pan or griddle is ready if a drop of water will skitter across the surface, evaporating immediately.</label><br>
+        <label><input type="checkbox">5. Drop scoops of batter onto the lightly greased griddle.</label><br>
+        <label><input type="checkbox">6. Bake on one side until bubbles begin to form and break, about 2 minutes; then turn the pancakes and cook the other side until brown, about 1 1/2 to 2 minutes. Turn over only once. Serve immediately.</label><br>
+      </form>
+    </div>
+  </body>
+</html>
+<script>
+
+function scale() {
+
+  var numbers = document.getElementsByClassName("number");
+
+  var scale = parseFloat(document.getElementById("scaler").userScale.value);
+
+  var i;
+
+  for (i = 0; i < numbers.length; i++) {
+    numbers[i].innerHTML = parseFloat(numbers[i].innerHTML) * scale;
+  }
+
+}
+
+</script>
